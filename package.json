@@ -4,10 +4,10 @@
     "name": "munawwar"
   },
   "description": "jQuery + browser-ish environment for unit testing on NodeJS",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "jquery-node.js",
   "dependencies": {
-    "jsdom": "1.0.0-pre.6",
+    "jsdom": "3.1.2",
     "jquery": "2.1.1"
   },
   "keywords": [
