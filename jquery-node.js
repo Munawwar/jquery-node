@@ -4,7 +4,7 @@ if (typeof define === 'function' && define.amd) {
     });
 } else if (typeof exports === 'object') { //for unit tests
     var jsdom = require('jsdom').jsdom,
-        window = jsdom('').parentWindow;
+        window = jsdom('').defaultView;
 
     GLOBAL.document = window.document;
     //(document.defaultView === window) is true
