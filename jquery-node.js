@@ -6,7 +6,12 @@ if (typeof define === 'function' && define.amd) {
     var jsdom = require('jsdom').jsdom,
         window = jsdom('').defaultView;
 
-    GLOBAL.document = window.document;
+    if(JSON.parse(process.version.match(/v(\d+)\.\d+\.\d+/)[1]) >= 6) {
+      global.document = window.document;
+    } else {
+      GLOBAL.document = window.document;
+    }
+
     //(document.defaultView === window) is true
 
     module.exports = require('jquery')(window);
